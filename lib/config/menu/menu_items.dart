@@ -46,7 +46,7 @@ const appMenuItems = <MenuItem>[
       link: '/progress',
       icon: Icons.pages_sharp),
   MenuItem(
-      title: 'snackbar',
+      title: 'snackbar y dialogos',
       subtitle: 'Un Snackbar',
       link: '/snackbar',
       icon: Icons.shopping_cart_checkout_rounded),
