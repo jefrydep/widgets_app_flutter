@@ -9,9 +9,9 @@ class ButtonsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('buttons Screen'),
+        title: const Text('buttons Screen'),
       ),
-      body: _ButtonView(),
+      body: const _ButtonView(),
       floatingActionButton: FloatingActionButton(onPressed: () {
         context.pop();
       }),
@@ -30,16 +30,16 @@ class _ButtonView extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
         child: Wrap(
           crossAxisAlignment: WrapCrossAlignment.center,
           children: [
-            ElevatedButton(onPressed: () {}, child: Text('Elevated button')),
-            ElevatedButton(onPressed: null, child: Text('Elevated button')),
+            ElevatedButton(onPressed: () {}, child: const Text('Elevated button')),
+            const ElevatedButton(onPressed: null, child: Text('Elevated button')),
             ElevatedButton.icon(
                 onPressed: () {},
-                icon: Icon(Icons.rocket_launch_rounded),
-                label: Text('elevated button')),
+                icon: const Icon(Icons.rocket_launch_rounded),
+                label: const Text('elevated button')),
             FilledButton(onPressed: () {}, child: const Text('Filled')),
             FilledButton.icon(
               onPressed: () {},
@@ -57,7 +57,7 @@ class _ButtonView extends StatelessWidget {
               icon: const Icon(Icons.account_box_outlined),
               label: const Text('Text Icon'),
             ),
-            CustomButton(),
+            const CustomButton(),
             IconButton(
                 onPressed: () {},
                 icon: const Icon(Icons.app_registration_rounded)),

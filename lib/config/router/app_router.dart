@@ -7,47 +7,47 @@ final appRouter = GoRouter(
       GoRoute(
         path: '/',
         name: HomeScreen.name,
-        builder: (context, state) => HomeScreen(),
+        builder: (context, state) => const HomeScreen(),
       ),
       GoRoute(
         path: '/buttons',
         name: ButtonsScreen.name,
-        builder: (context, state) => ButtonsScreen(),
+        builder: (context, state) => const ButtonsScreen(),
       ),
       GoRoute(
         path: '/card',
         name: CardsScreen.name,
-        builder: (context, state) => CardsScreen(),
+        builder: (context, state) => const CardsScreen(),
       ),
       GoRoute(
         path: '/animated',
         // name: CardsScreen.name,
-        builder: (context, state) => AnimatedScreen(),
+        builder: (context, state) => const AnimatedScreen(),
       ),
       GoRoute(
         path: '/app_tutorial',
         // name: CardsScreen.name,
-        builder: (context, state) => AppTutorialScreen(),
+        builder: (context, state) => const AppTutorialScreen(),
       ),
       GoRoute(
         path: '/infiniti',
         // name: CardsScreen.name,
-        builder: (context, state) => InfinitiScrollScreen(),
+        builder: (context, state) => const InfinitiScrollScreen(),
       ),
       GoRoute(
         path: '/progress',
         // name: CardsScreen.name,
-        builder: (context, state) => ProgressScreen(),
+        builder: (context, state) => const ProgressScreen(),
       ),
       GoRoute(
         path: '/snackbar',
         // name: CardsScreen.name,
-        builder: (context, state) => SnackbarScreen(),
+        builder: (context, state) => const SnackbarScreen(),
       ),
       GoRoute(
         path: '/ui',
         // name: CardsScreen.name,
-        builder: (context, state) => UiControlsScreen(),
+        builder: (context, state) => const UiControlsScreen(),
       ),
       
     ]);
