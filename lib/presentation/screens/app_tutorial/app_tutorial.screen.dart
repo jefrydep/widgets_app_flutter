@@ -1,4 +1,5 @@
 
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 class SlideInfo{
@@ -23,8 +24,33 @@ class AppTutorialScreen extends StatefulWidget {
 }
 
 class _AppTutorialScreenState extends State<AppTutorialScreen> {
-  late final pageviewController = PageController();
+  // late final pageviewController = PageController();
+    final PageController pageviewController = PageController();
+    bool isEnd = false;
    
+   @override
+  void initState() {
+    super.initState();
+    pageviewController.addListener(() {
+     final page = pageviewController.page ?? 0;
+     if(!isEnd && page >= (slides.length - 1.5)){
+      setState(() {
+        
+      isEnd = true;
+      });
+
+     }
+
+      // print('${pageviewController.page}');
+
+    });
+  }
+  @override
+  void dispose() {
+    
+    pageviewController.dispose();
+    super.dispose();
+  }
   
   @override
   Widget build(BuildContext context) {
@@ -43,11 +69,17 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
               ).toList()
           ),
           Positioned(
+       
             top: 50,
             right: 20,
             child: TextButton(onPressed: (){
               context.pop();
-          }, child: const Text('Salir',style: TextStyle(fontSize: 18),)))
+          }, child: const Text('Salir',style: TextStyle(fontSize: 18),))),
+
+          (isEnd)?Positioned(
+            bottom: 70,
+            right: 30,
+            child: FadeInRight(child: FilledButton(onPressed: ()=> context.pop(), child: const Text('Comenzar')))):SizedBox()
         ],
       ),
     );
