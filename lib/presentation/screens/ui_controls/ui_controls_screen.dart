@@ -24,6 +24,9 @@ enum Transportation { car, plane, boat, submarin }
 class _UiControllsViewState extends State<_UiControllsView> {
   bool isDeveloper = true;
   Transportation selectedTransportation = Transportation.car;
+  bool wantsBreakfast = false;
+  bool wantsLunch = true;
+  bool wantDinner =  false;
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -39,7 +42,7 @@ class _UiControllsViewState extends State<_UiControllsView> {
             }),
         ExpansionTile(
           subtitle: Text('$selectedTransportation'),
-          title: Text('Vehiculo de transporte'),
+          title: const Text('Vehiculo de transporte'),
           children: [
             RadioListTile(
                 title: const Text('by car'),
@@ -74,6 +77,30 @@ class _UiControllsViewState extends State<_UiControllsView> {
                       selectedTransportation = Transportation.submarin;
                     }))
           ],
+        ),
+        CheckboxListTile(
+          title: const Text('¿Desayuno?'),
+          subtitle: const Text('Deseas desayuno'),
+          value: wantsBreakfast, 
+          onChanged: (value)=> setState(() {
+          wantsBreakfast = !wantsBreakfast;
+        }),
+        ),
+         CheckboxListTile(
+          title: const Text('Almuerzo?'),
+          subtitle: const Text('Deseas Almuerzo'),
+          value: wantsLunch, 
+          onChanged: (value)=> setState(() {
+          wantsLunch = !wantsLunch;
+        }),
+        ),
+         CheckboxListTile(
+          title: const Text('Cena?'),
+          subtitle: const Text('Deseas Cena?'),
+          value: wantDinner, 
+          onChanged: (value)=> setState(() {
+          wantDinner = !wantDinner;
+        }),
         )
       ],
     );

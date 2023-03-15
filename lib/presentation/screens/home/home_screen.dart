@@ -10,17 +10,15 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home View'),
+        title: const Text('Home View'),
       ),
-      body: const _HomeView(),
+      body:   _HomeView(),
     );
   }
 }
 
 class _HomeView extends StatelessWidget {
-  const _HomeView({
-    super.key,
-  });
+  
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +32,7 @@ class _HomeView extends StatelessWidget {
             menuItems.icon,
             color: colors.primary,
           ),
-          trailing: Icon(Icons.arrow_back_ios),
+          trailing: const Icon(Icons.arrow_back_ios),
           title: Text(menuItems.title),
           subtitle: Text(menuItems.subtitle),
           onTap: () {

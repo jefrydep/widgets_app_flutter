@@ -11,7 +11,7 @@ class ButtonsScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('buttons Screen'),
       ),
-      body: const _ButtonView(),
+      body:   _ButtonView(),
       floatingActionButton: FloatingActionButton(onPressed: () {
         context.pop();
       }),
@@ -20,9 +20,7 @@ class ButtonsScreen extends StatelessWidget {
 }
 
 class _ButtonView extends StatelessWidget {
-  const _ButtonView({
-    super.key,
-  });
+  
 
   @override
   Widget build(BuildContext context) {
