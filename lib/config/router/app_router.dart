@@ -32,7 +32,6 @@ final appRouter = GoRouter(
       GoRoute(
         path: '/infiniti',
         // name: CardsScreen.name,
-        builder: (context, state) => const InfinitiScrollScreen(),
       ),
       GoRoute(
         path: '/progress',
@@ -49,5 +48,4 @@ final appRouter = GoRouter(
         // name: CardsScreen.name,
         builder: (context, state) => const UiControlsScreen(),
       ),
-      
     ]);
