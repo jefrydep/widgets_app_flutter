@@ -55,5 +55,14 @@ const appMenuItems = <MenuItem>[
       subtitle: 'controlles UI',
       link: '/ui',
       icon: Icons.control_point_duplicate),
-  
+  MenuItem(
+      title: 'counter_riverpood',
+      subtitle: 'managmen state with Riverpood',
+      link: '/counter',
+      icon: Icons.connect_without_contact_sharp),
+  MenuItem(
+      title: 'theme changer',
+      subtitle: 'theme changer provider with riverpood',
+      link: '/theme_changer',
+      icon: Icons.dark_mode_sharp),
 ];

@@ -1,4 +1,6 @@
+import 'package:buttons_app/presentation/screens/counter/counter_screen.dart';
 import 'package:buttons_app/presentation/screens/screens.dart';
+import 'package:buttons_app/presentation/screens/theme_changer/theme_changer_screen.dart';
 import 'package:go_router/go_router.dart';
 
 final appRouter = GoRouter(
@@ -31,7 +33,8 @@ final appRouter = GoRouter(
       ),
       GoRoute(
         path: '/infiniti',
-        // name: CardsScreen.name,
+        name: InfiniteScrollScreen.name,
+        builder: (context, state) => InfiniteScrollScreen(),
       ),
       GoRoute(
         path: '/progress',
@@ -47,5 +50,15 @@ final appRouter = GoRouter(
         path: '/ui',
         // name: CardsScreen.name,
         builder: (context, state) => const UiControlsScreen(),
+      ),
+      GoRoute(
+        path: '/counter',
+        // name: CardsScreen.name,
+        builder: (context, state) => const CounterScreen(),
+      ),
+      GoRoute(
+        path: '/theme_changer',
+        // name: CardsScreen.name,
+        builder: (context, state) => const ThemeChangerScreen(),
       ),
     ]);
